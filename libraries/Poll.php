@@ -94,8 +94,6 @@ class Poll
 			(is_array($votes)) ? ksort($votes) : '';
 			$question = $row->question;
 			
-			//var_dump($votes, $answers);
-			
 			$vote_ = '';
 			$answer_ = '';
 			
@@ -135,7 +133,7 @@ class Poll
 			$js = "<script type=\"text/javascript\">
 			   function createChart() {
 				   $(\"#chart\").kendoChart({
-					   theme: $(document).data(\"kendoSkin\"),
+					   theme: \"kendo\",
 					   title: {
 						   font: \"13px Verdana, sans-serif\",
 						   text: \"'".$question."'\"
@@ -166,6 +164,9 @@ class Poll
 						   majosUnit: 1,
 						   majorTickType: \"none\",
 						   minorGridLines: false
+					   },
+					   tooltip: {
+						   visible: true   
 					   }
 				   });
 			   }
