@@ -5,7 +5,7 @@
  *
  * Codeigniter poll library with KendoUI chart widget
  *
- * @author 		Barna Szalai <sz.b@subdesign.hu>
+ * @author 	Barna Szalai <sz.b@subdesign.hu>
  * @copyright 	Copyright (c) 2011, Barna Szalai
  * @version 	0.0.1
  *
@@ -76,7 +76,7 @@ class Poll
 	}
 	
 	/**
-	 *	Get the active poll and builds the javascript chart
+	 *  Get the active poll and builds the javascript chart
 	 *  @return array
 	 *
 	 */
@@ -93,7 +93,11 @@ class Poll
 			$votes = unserialize($row->votes);
 			(is_array($votes)) ? ksort($votes) : '';
 			$question = $row->question;
+<<<<<<< HEAD
 			
+=======
+							
+>>>>>>> 626076d000ba60ad2c7cab1cd7d9da31472d4674
 			$vote_ = '';
 			$answer_ = '';
 			
@@ -103,12 +107,12 @@ class Poll
 				{	
 					if(array_key_exists($i, $votes))
 					{
-						$vote_ .= ($i < count($answers)) ? $votes[$i].', ' : $votes[$i];
-						$answer_ .= ($i < count($answers)) ? '"'.$answers[$i].' ('.$votes[$i].')", ' : '"'.$answers[$i].' ('.$votes[$i].')"';	  	
+					    $vote_ .= ($i < count($answers)) ? $votes[$i].', ' : $votes[$i];
+					    $answer_ .= ($i < count($answers)) ? '"'.$answers[$i].' ('.$votes[$i].')", ' : '"'.$answers[$i].' ('.$votes[$i].')"';	  	
 					}
 					else
 					{
-						$vote_ .= ($i < count($answers)) ? 0 .', ' : 0;	
+					    $vote_ .= ($i < count($answers)) ? 0 .', ' : 0;	
 					    $answer_ .= ($i < count($answers)) ? '"'.$answers[$i].' (0)", ' : '"'.$answers[$i].' (0)"';	  						
 					}
 				}
@@ -117,8 +121,8 @@ class Poll
 			{
 				for($k = 1; $k <= count($answers); $k++)
 				{
-					$vote_ .= ($k < count($answers)) ? 0 .', ' : 0;
-					$answer_ .= ($k < count($answers)) ? '"'.$answers[$k].' (0)", ' : '"'.$answers[$k].' (0)"';	
+				    $vote_ .= ($k < count($answers)) ? 0 .', ' : 0;
+				    $answer_ .= ($k < count($answers)) ? '"'.$answers[$k].' (0)", ' : '"'.$answers[$k].' (0)"';	
 				}
 			}
 						
@@ -189,7 +193,7 @@ class Poll
 	}	
 	
 	/**
-	 *	Get all polls (Admin)
+	 *  Get all polls (Admin)
 	 *  @return string
 	 *
 	 */
@@ -220,7 +224,7 @@ class Poll
 	}
 	
 	/**
-	 *	Set poll status (Admin)
+	 *  Set poll status (Admin)
 	 *  @params integer $id
 	 */
 	public function set_poll_status($id)
@@ -230,7 +234,7 @@ class Poll
 	}
 	
 	/**
-	 *	Save new poll (Admin)
+	 *  Save new poll (Admin)
 	 *  @params array $datas
 	 *
 	 */
@@ -244,8 +248,8 @@ class Poll
 		$this->CI->db->insert('polls', $data);
 	}	
 	
-    /**
-	 *	Reset poll values (Admin)
+        /**
+	 *  Reset poll values (Admin)
 	 *  @params integer $id
 	 *
 	 */
