@@ -2,6 +2,8 @@
 
 A simple poll library using KendoUI javascript framework chart widget
 
+![Codeigniter Subpoll](http://www.subdesign.hu/git/git_subpoll.jpg)
+
 ## Installation
 
 1. Copy the zip content into your application directory
