@@ -28,26 +28,32 @@ Use controller/method subpoll/admin_poll
 
 ## Functions
 
-SubPoll example controller functions:
+###SubPoll example controller functions
    
 
 Show the currently active poll's question and answers:
+
     poll_item()
 
 Show the currently active poll's results:
+
     poll_result() 
 
 Show the polls management view:
+
     admin_polls() 
 
 Add a new poll to the database:
+
     add_new_poll()
 
 Set a poll status to active/inactive 
 (Note: always one active poll is available at the same time):
+
     set_poll_status()
 
 Reset a poll values to zero:
+
     reset_poll()
 
 ## Notes
